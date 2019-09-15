@@ -1,6 +1,6 @@
 def nyc_pigeon_organizer(data)
-  data.each_with_object({}) do |(key, h), result|
-    h.each do |value, names|
+  data.each_with_object({}) do |(key, hash), result|
+    hash.each do |value, names|
       names.each do |name|
         result[name] = {} unless result[name]
         result[name][key] = [] unless result[name][key]
